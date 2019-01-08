@@ -1,2 +1,2 @@
-# probelms_solved-Beginner_plan-
+# CP
 Problems solved on online judges platform
