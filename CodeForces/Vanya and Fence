@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.io.*;
+public class Div2A {
+public static void main(String[]args){
+	PrintWriter pr = new PrintWriter(System.out);
+	Scanner sc = new Scanner(System.in);
+	int min = 0;
+	int n = sc.nextInt();
+	int h = sc.nextInt();
+	for(int i =0; i < n;i++){
+	if(sc.nextInt() > h) {
+	min+=2;
+	}	
+	else {
+	min+=1;	
+	}
+	}
+pr.println(min);
+pr.flush();
+}
+}
