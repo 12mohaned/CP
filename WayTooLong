@@ -1,0 +1,27 @@
+import java.util.*;
+public class WayTooLong {
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+int N = sc.nextInt();
+while(N > 0){
+String sum = sc.next();
+if(sum.length() <= 10){
+System.out.println(sum);
+}
+else
+{
+String result = "";    
+result = sum.charAt(0)+"" + counter(sum)+ ""+ sum.charAt(sum.length()-1) ;
+System.out.println(result);
+}
+N--;
+}
+}
+public static int  counter(String sum){
+int count = 0;
+    for(int i=1; i <sum.length()-1;i++){
+count++;
+}
+return count;
+}
+}
