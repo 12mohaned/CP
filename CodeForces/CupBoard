@@ -1,0 +1,54 @@
+import java.util.*;
+public class Cupboards{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+int N = sc.nextInt();
+int [] Left = new int [N];
+int [] Right = new int [N];
+int L0 = 0;
+int L1 = 0;
+int R1 = 0;
+int R0 = 0;
+int timeR = 0;
+int timeL = 0;
+for(int i =0; i < N;i++){
+int l = sc.nextInt();
+int r = sc.nextInt();
+if(l == 0){
+L0++;
+}
+if(l == 1){
+L1++;
+}
+if(r == 1){
+R1++;
+}
+if(r == 0){
+R0++;
+}
+}
+if(L0 > L1){
+timeL = N - L0;
+}
+else{
+if(L0 < L1){
+timeL = N - L1;
+}
+else{
+timeL = N - L1;
+}
+}
+if(R0 > R1){
+timeR = N - R0;
+}
+else{
+if(R0 < R1){
+timeR = N - R1;
+}
+else{
+timeR = N - R1;
+}
+}
+System.out.println(timeL + timeR);
+}
+}
