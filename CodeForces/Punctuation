@@ -1,0 +1,41 @@
+import java.util.*;
+import java.io.*;
+/**
+ * Write a description of class Capital here.
+ *
+ * @mohaned mashaly
+ * @version (a version number or a date)
+ */
+public class Capital
+{
+public static void main(String[] args) throws IOException
+    {
+    PrintWriter r = new PrintWriter(System.out);
+    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //Punctuation 
+    String Word = br.readLine();
+    String Output ="";
+    boolean NoSpace = true;
+    StringTokenizer st = new StringTokenizer(Word);
+    String Pun = "";
+    while(st.hasMoreTokens()){
+        String word = st.nextToken();
+         if(Output.length() > 0 && Output.charAt(Output.length()-1) != ' ' && word.charAt(0) >= 'a' && word.charAt(0) <= 'z')
+         {
+         Output+=" ";
+         }
+    for(int i =0 ; i < word.length();i++)
+    {
+        Output+=word.charAt(i);
+      if(word.charAt(i) < 'a' || word.charAt(i) > 'z'){
+        Output+=" ";
+        }     
+    }
+   
+}
+    
+    System.out.println(Output);
+
+    }
+}
