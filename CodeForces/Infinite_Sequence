@@ -1,0 +1,40 @@
+mport java.util.*;
+import java.io.*;
+public class Infinite_Sequence
+{
+    public static void main(String[]args)throws IOException{
+PrintWriter pr = new PrintWriter(System.out);
+ 
+Scanner sc = new Scanner(System.in);
+int A = sc.nextInt();
+int B = sc.nextInt();
+int C = sc.nextInt();
+String s = "";
+StringBuilder sb = new StringBuilder(s);
+if(A == B){
+sb.append("YES");
+}
+else{
+if(A < B){
+if(C > 0  && (B-A)% C == 0){
+sb.append("YES");
+}
+else{
+ 
+sb.append("NO");
+}
+}
+else
+{
+if(C < 0 && (B-A) % Math.abs(C) == 0){
+sb.append("YES");
+}
+else{
+sb.append("NO");
+}
+}
+}
+pr.print(sb);
+pr.flush();
+}
+}
