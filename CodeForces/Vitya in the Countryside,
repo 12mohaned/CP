@@ -1,0 +1,43 @@
+import java.util.*;
+import java.io.*;
+public class Vitya in the Countryside,
+{
+public static void main(String[] args) throws IOException
+    {
+    PrintWriter r = new PrintWriter(System.out);
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int[]Visible = new int[n];
+    for(int i =0;i < n;i++){
+    Visible[i] = sc.nextInt();
+    }
+       if(Visible[Visible.length-1] == 0){
+    r.writeline("UP");
+       }
+       else{
+       if(Visible[Visible.length-1] == 15){
+        r.writeline("DOWN");
+        }
+        
+        else{
+    if(n >= 2){  
+    if(Visible[Visible.length-1] < Visible[Visible.length -2]){
+        r.writeline("DOWN");
+
+    }
+    else{
+      if(Visible[Visible.length-1] > Visible[Visible.length -2]){
+    r.writeline("UP");
+    }
+    
+    }
+}
+else{
+r.writeline(-1);
+}
+}
+    }
+    r.flush();
+
+    }
+}
