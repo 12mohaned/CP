@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+public class SagheerCrossRoads
+{
+public static void main(String[]args){
+ PrintWriter r = new PrintWriter(System.out);
+ Scanner sc = new Scanner(System.in);
+ boolean Accident = false;
+  int l1 = sc.nextInt(),s1 = sc.nextInt(),r1 = sc.nextInt(),p1 = sc.nextInt(); 
+  int l2 = sc.nextInt(),s2 = sc.nextInt(),r2 = sc.nextInt(),p2 = sc.nextInt(); 
+  int l3 = sc.nextInt(),s3 = sc.nextInt(),r3 = sc.nextInt(),p3 = sc.nextInt(); 
+  int l4 = sc.nextInt(),s4 = sc.nextInt(),r4 = sc.nextInt(),p4 = sc.nextInt(); 
+ if(p4 == 1 & (l4 == 1 || r4 ==1 || s4 ==1 || s2 == 1 || l1 == 1 || r3 == 1)){
+   Accident = true; 
+ }
+ if(p3 == 1 & (l3 == 1 || r3 ==1 || s3 ==1 || s1 == 1 || l4 == 1 || r2 == 1)){
+   Accident = true; 
+ }
+ if(p2 == 1 & (l2 == 1 || r2 ==1 || s2 ==1 || s4 == 1 || r1 == 1 || l3 == 1)){
+   Accident = true; 
+ }
+ if(p1 == 1 & (l1 == 1 || r1 ==1 || s1 ==1 || s3 == 1 || l2 == 1 || r4 == 1)){
+   Accident = true; 
+ }
+if(Accident){
+System.out.println("YES");
+}
+else{
+System.out.println("NO");
+}
+}
+}
