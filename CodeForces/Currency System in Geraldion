@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+public class CurrencySysteminGeraldion
+{
+public static void main(String[] args) throws IOException
+    {
+    PrintWriter r = new PrintWriter(System.out);
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int[]Set = new int[n];
+    boolean Currency = false;
+    for(int i =0;i < n;i++){
+    Set[i] = sc.nextInt();
+    if(Set[i] == 1){
+    Currency = true;
+    }
+    }
+    if(Currency){
+    System.out.println(-1);
+}
+else{
+    System.out.println(1);
+}    
+}
+}
