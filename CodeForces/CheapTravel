@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+public class CheapTravel
+{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+PrintWriter pr = new PrintWriter(System.out);
+int n = sc.nextInt(),m = sc.nextInt(),a = sc.nextInt(),b = sc.nextInt();
+int min = 0;
+int TicketPackage ;
+TicketPackage = ((int)(Math.ceil((double)n/m))) * b;   
+int onewayTicket =  n * a;
+if(m*a <= b){
+min = onewayTicket;
+}
+else{
+min = n/m*b + Math.min(n%m * a,b);
+}
+    System.out.println(min);
+}
+}
