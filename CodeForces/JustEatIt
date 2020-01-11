@@ -1,0 +1,46 @@
+import java.util.*;
+import java.io.*;
+public class JustEatIt
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	   PrintWriter r = new PrintWriter(System.out);
+    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    PrintWriter pr = new PrintWriter(System.out);
+        int t = sc.nextInt();
+                while(t-- > 0){
+                int n = sc.nextInt();
+                long[]Taste = new long [n];
+                long sum=0;
+                boolean tut = false;
+                for(int i =0; i < n;i++){
+                Taste[i] = sc.nextInt();
+                }    
+                for(int i =0; i < n;i++){
+                sum+=Taste[i];
+                if(sum <=0){
+                    tut = true;
+                break;
+                }
+                }
+                sum = 0;
+                if(!tut){
+                 for(int i =n-1; i >= 0;i--){
+                sum+=Taste[i];
+                if(sum <=0){
+                    tut = true;
+                break;
+                }
+                }
+            }
+                if(!tut){
+                pr.println("YES");
+                }
+                else{
+                pr.println("NO");
+                }
+                pr.flush();
+            }
+            }
+        }
