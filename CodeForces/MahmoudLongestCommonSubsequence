@@ -1,0 +1,27 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.IOException;
+public class MahmoudLongestCommonSubsequence
+{
+public static void main(String[]args)throws IOException{
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+PrintWriter pr = new PrintWriter(System.out);
+String A = br.readLine();
+String B = br.readLine();
+String LongestCommon = "";
+if(A.equals(B)){
+LongestCommon = "-1";
+}
+else{
+if(A.length() > B.length()){
+LongestCommon = A.length()+"";
+}
+else{
+LongestCommon = B.length()+"";
+}
+}
+pr.println(LongestCommon);
+pr.flush();
+}
+}
